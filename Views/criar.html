@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="../src/css/bootstrap.min.css">
     <link rel="stylesheet" href="../src/css/estilo.css">
     <link rel="stylesheet" href="../src/css/estiloNavBar.css">
@@ -45,18 +44,18 @@
                 <li>Selecione o nível de prioridade (não coloque 1 em qualquer solicitação pois ela será readequada caso
                     não seja condizente com a solicitação).</li>
                 <li>Para definir a prioridade, pense no quanto ela afeta o contato com o cliente, as finanças, o fluxo
-                    da empresa e a capacidade de operação do setor. <br>- Urgente e importante (nível 1) <br>-
-                    Importante mas não urgente (nível 2) <br>- Não importante e não urgente (nível 3)</li>
+                    da empresa e a capacidade de operação do setor. <br><span class="text-success">- Urgente e importante (nível 1)<br><span class="text-success">-
+                    Importante mas não urgente (nível 2)</span><br><span class="text-success">- Não importante e não urgente (nível 3</span>)</li>
                 <li>Dê um título a sua solicitação (máximo 40 caractéres)</li>
-                <li>Descreva a solicitação com clareza e detalhes. <b>Informações úteis a serem informadas: qual a
-                        mensagem de erro lançada, como reproduzir o erro, o erro começou após certa atividade,etc.</b>
+                <li>Descreva a solicitação com clareza e detalhes. <b class="text-warning">Informações úteis a serem informadas: qual a
+                        mensagem de erro lançada, como reproduzir a falha, o problema começou após certa atividade, etc.</b>
                 </li>
                 <li>Verifique com seu setor se mais pessoas têm o mesmo problema. Caso afirmativo, abra apenas uma
                     solicitação para o setor.</li>
             </ol>
             <div class="form-group fb-itemForm text-cyber">
                 <label for="cardNivel" class="form-label mt-4">-_-_-_-_-Nível de prioridade-_-_-_-_-</label>
-                <select class="form-select" id="cardNivel">
+                <select class="form-select" id="cardNivel" required>
                     <option>1</option>
                     <option>2</option>
                     <option>3</option>
@@ -65,7 +64,7 @@
 
             <div class="form-group fb-itemForm text-cyber">
                 <label for="cardSetor" class="form-label mt-4">-_-_-_-_-Setor da solicitação-_-_-_-_-</label>
-                <select class="form-select" id="cardSetor">
+                <select class="form-select" id="cardSetor" required>
                     <option>Comercial</option>
                     <option>Depto Pessoal</option>
                     <option>Diretoria</option>
@@ -79,22 +78,22 @@
 
             <div class="form-group fb-itemForm text-cyber">
                 <label for="exampleTextarea" class="form-label mt-4">-_-_-_-_-Titulo da solicitação-_-_-_-_-</label>
-                <textarea class="form-control" id="cardTitulo" rows="3" maxlength="40"></textarea>
+                <textarea class="form-control" id="cardTitulo" rows="3" maxlength="40" required></textarea>
             </div>
 
             <div class="form-group fb-itemForm text-cyber">
                 <label for="exampleTextarea" class="form-label mt-4">-_-_-_-_-_-_-_-_-_-_-_-_-Descreva a
                     solicitação-_-_-_-_-_-_-_-_-_-_-_-_-</label>
-                <textarea class="form-control" id="cardDescricao" rows="10"></textarea>
+                <textarea class="form-control" id="cardDescricao" rows="10" required></textarea>
             </div>
 
             <div class="form-floating mb-3 fb-itemForm text-cyber">
-                <input type="date" class="form-control" id="cardData" placeholder="">
+                <input type="date" class="form-control" id="cardData" placeholder="" min="2022-10-16" max="2099-12-31" required>
                 <label for="floatingInput">Data da Solicitação</label>
             </div>
 
             <div class="form-floating mb-3 fb-itemForm text-cyber">
-                <input type="text" class="form-control" id="cardSolicitante" placeholder="">
+                <input type="text" class="form-control" id="cardSolicitante" placeholder="" required>
                 <label for="floatingInput">Nome do Solicitante</label>
             </div>
 
