@@ -7,17 +7,15 @@ h1 {
 
 .fb-container {
     /*Configs Flexbox*/
-    display: inline-flex;
+    display: inline-flex; /*inline-flex antes*/
     flex-flow: row wrap;
     justify-content: flex-start; /*space-around antes*/
     align-items: flex-start;
-    align-content: space-around;
+    align-content: flex-start; /*space-around antes*/
     /* gap: 1% 1%; */
 
      text-align: center;
-    /*background-image: url(../img/PrevOP.jpg);
-    background-repeat: no-repeat;
-    background-size: contain; */
+     width: 100vw; /* adicionado para testar o alinhamento dos cards */
 }
 
 .fb-item {
