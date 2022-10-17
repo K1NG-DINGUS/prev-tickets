@@ -1,0 +1,12 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;800&display=swap');
+
+.navbar-brand {
+    font-family: 'Orbitron', sans-serif;
+    font-size: x-large;
+}
+
+.nav-item {
+    font-family: 'Orbitron', sans-serif;
+    font-size: large;
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="../src/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../src/css/estilo.css">
+    <link rel="stylesheet" href="../src/css/estiloNavBar.css">
+    <title>Produção TI</title>
+</head>
+
+<body>
+
+    <!-- Barra de navegação -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Produção TI</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01"
+                aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarColor01">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Voltar para o inicio
+                            <span class="visually-hidden">(current)</span>
+                        </a>
+                    </li>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Conteúdo -->
+    <main>
+
+        <div class="fb-containerForm">
+            <h1 class="criaCard-titulo fb-extraMargin">Criação de novo ticket</h1>
+            <br>
+            <h3 class="text-cyber">Instruções</h3>
+            <ol class="text-cyber">
+
+                <li>Selecione o nível de prioridade (não coloque 1 em qualquer solicitação pois ela será readequada caso
+                    não seja condizente com a solicitação).</li>
+                <li>Para definir a prioridade, pense no quanto ela afeta o contato com o cliente, as finanças, o fluxo
+                    da empresa e a capacidade de operação do setor. <br>- Urgente e importante (nível 1) <br>-
+                    Importante mas não urgente (nível 2) <br>- Não importante e não urgente (nível 3)</li>
+                <li>Dê um título a sua solicitação (máximo 40 caractéres)</li>
+                <li>Descreva a solicitação com clareza e detalhes. <b>Informações úteis a serem informadas: qual a
+                        mensagem de erro lançada, como reproduzir o erro, o erro começou após certa atividade,etc.</b>
+                </li>
+                <li>Verifique com seu setor se mais pessoas têm o mesmo problema. Caso afirmativo, abra apenas uma
+                    solicitação para o setor.</li>
+            </ol>
+            <div class="form-group fb-itemForm text-cyber">
+                <label for="cardNivel" class="form-label mt-4">-_-_-_-_-Nível de prioridade-_-_-_-_-</label>
+                <select class="form-select" id="cardNivel">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                </select>
+            </div>
+
+            <div class="form-group fb-itemForm text-cyber">
+                <label for="cardSetor" class="form-label mt-4">-_-_-_-_-Setor da solicitação-_-_-_-_-</label>
+                <select class="form-select" id="cardSetor">
+                    <option>Comercial</option>
+                    <option>Depto Pessoal</option>
+                    <option>Diretoria</option>
+                    <option>Financeiro</option>
+                    <option>Marketing</option>
+                    <option>Planejamento</option>
+                    <option>TI</option>
+                </select>
+            </div>
+
+            <div class="form-group fb-itemForm text-cyber">
+                <label for="exampleTextarea" class="form-label mt-4">-_-_-_-_-Titulo da solicitação-_-_-_-_-</label>
+                <textarea class="form-control" id="cardTitulo" rows="3" maxlength="40"></textarea>
+            </div>
+
+            <div class="form-group fb-itemForm text-cyber">
+                <label for="exampleTextarea" class="form-label mt-4">-_-_-_-_-_-_-_-_-_-_-_-_-Descreva a
+                    solicitação-_-_-_-_-_-_-_-_-_-_-_-_-</label>
+                <textarea class="form-control" id="cardDescricao" rows="10"></textarea>
+            </div>
+
+            <div class="form-floating mb-3 fb-itemForm text-cyber">
+                <input type="date" class="form-control" id="cardData" placeholder="">
+                <label for="floatingInput">Data da Solicitação</label>
+            </div>
+
+            <div class="form-floating mb-3 fb-itemForm text-cyber">
+                <input type="text" class="form-control" id="cardSolicitante" placeholder="">
+                <label for="floatingInput">Nome do Solicitante</label>
+            </div>
+
+            <button type="submit" class="btn btn-light fb-itemForm text-cyber" id="btnCriar">Criar novo ticket</button>
+        </div>
+
+    </main>
+
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+    crossorigin="anonymous"></script>
+<script src="../Controllers/criar.js" type="module"></script>
+
+</html>
